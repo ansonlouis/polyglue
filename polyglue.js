@@ -1,7 +1,7 @@
 // polyglue.js
 
 
-function polyglue(filepath){
+function polyglue(filepath, destPath){
 
   var _this = this;
 
@@ -9,6 +9,7 @@ function polyglue(filepath){
 
 
   this.filepath = null;
+  this.destPath = null;
 
   this.fileStub = null;
   this.fileDir = null;
@@ -158,8 +159,8 @@ function polyglue(filepath){
 
 
   this.writeFile = function(){
-    console.log("ABOUT to write...");
-    $fs.writeFile('sticky.html', _this.finalContent, function(err){
+    console.log("ABOUT to write to: ", _this.destPath);
+    $fs.writeFile(_this.destPath, _this.finalContent, function(err){
       if(!err){
         console.log('file written!');
       }else{
@@ -169,9 +170,10 @@ function polyglue(filepath){
   };
 
 
-  this.construct = function(filepath){
+  this.construct = function(filepath, destPath){
 
     this.filepath = filepath;
+    this.destPath = destPath || "polyglue.html";
 
     var filePieces = this.filepath.split('/');
     this.fileStub = filePieces.pop();
@@ -190,7 +192,7 @@ function polyglue(filepath){
 
 
   if(filepath){
-    return this.construct(filepath);
+    return this.construct(filepath, destPath);
   }
 
 

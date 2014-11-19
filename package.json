@@ -2,9 +2,12 @@
   "name": "polyglue",
   "version": "0.0.0",
   "description": "Simple module to pack your external script and style files inline in your corresponding polymer element.",
-  "main": "index.js",
+  "main": "polyglue.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "polyglue" : "index.js"
   },
   "repository": {
     "type": "git",

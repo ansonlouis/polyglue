@@ -1,11 +1,17 @@
 #!/usr/bin/env node
 
 
-var filepath = process.argv[2] || null;
+if(process.argv.length > 2){
 
-console.log(filepath, process.argv);
+  var filepath = process.argv[2] || null;
+  var destPath = process.argv[3] || null;
 
-if(filepath){
-  var $polyglue = require('./polyglue');
-  var stick = new $polyglue(filepath);
+  // if user specified a filepath as the first argument
+  // after "polyglue", run it on that file
+  if(filepath){
+    var $polyglue = require('./polyglue');
+    var stick = new $polyglue(filepath, destPath);
+  }
+
 }
+
