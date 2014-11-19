@@ -1,0 +1,23 @@
+{
+  "name": "polyglue",
+  "version": "0.0.0",
+  "description": "Simple module to pack your external script and style files inline in your corresponding polymer element. Note, this is just for inlining scripts and styles that were built for the polymer element itself and ONLY that polymer element. This allows you to separate your script and styles from the element markup for development purposes and combine them for production.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ansonlouis/polyglue.git"
+  },
+  "keywords": [
+    "polymer",
+    "web-component"
+  ],
+  "author": "Anson Airoldi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ansonlouis/polyglue/issues"
+  },
+  "homepage": "https://github.com/ansonlouis/polyglue"
+}
